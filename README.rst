@@ -44,7 +44,7 @@ For more information about the various packages included in the mpi roll please 
 
 - `MVAPICH2 <http://mvapich.cse.ohio-state.edu/overview/mvapich2/>`_
    is an MPI-3 implementation.
-- `<MPI <http://www.open-mpi.org>`_ is an open source MPI-2 implementation that 
+- `MPI <http://www.open-mpi.org>`_ is an open source MPI-2 implementation that 
    is developed and maintained by a consortium of academic, research, and industry partners.
 
 **Requirements**
