@@ -12,10 +12,10 @@ Cloned on 2014-12-16,  output of ``git describe``: ::
 
     v6.2-19-gf3122ae
 
-To make a roll with only openmpi (no mpvarich2) for eth and mx fabric and 
-gnu an dintel compilers use the following command: ::
+To make a roll with openmpi (no mpvarich2) for eth and mx fabric and 
+gnu and intel compilers use the following command: ::
 
-    ROLLCOMPILER='gnu intel' ROLLMPI='openmpi'  ROLLNETWORK='eth mx' 2>&1 | tee build.log
+    make ROLLCOMPILER='gnu intel' ROLLMPI='openmpi'  ROLLNETWORK='eth mx' 2>&1 | tee build.log
 
 Downloads
 -----------
