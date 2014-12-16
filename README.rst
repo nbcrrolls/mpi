@@ -37,24 +37,24 @@ Original sdsc-roll README
 ----------------------------------
 Info below is from the original roll README
 
-Overview
-~~~~~~~~~~
+**Overview**
+
 This roll bundles various flavors of the MPI library.
 For more information about the various packages included in the mpi roll please visit their official web pages:
 
-- `MVAPICH2 <http://mvapich.cse.ohio-state.edu/overview/mvapich2/>`
+- `MVAPICH2 <http://mvapich.cse.ohio-state.edu/overview/mvapich2/>`_
    is an MPI-3 implementation.
-- `<MPI <http://www.open-mpi.org>` is an open source MPI-2 implementation that 
+- `<MPI <http://www.open-mpi.org>`_ is an open source MPI-2 implementation that 
    is developed and maintained by a consortium of academic, research, and industry partners.
 
-Requirements
-~~~~~~~~~~~~~~~
+**Requirements**
+
 To build/install this roll you must have root access to a Rocks development
 machine (e.g., a frontend or development appliance).
 Download the appropriate mpi source file(s) into the `src/<package>`.
 
-Dependencies
-~~~~~~~~~~~~~~~
+**Dependencies**
+
 - autoconf >= 2.69 (mvapich2).  You can get this from the SDSC gnutools-roll.
 - The sdsc-roll must be installed on the build machine, since the build process
   depends on make include files provided by that roll.
@@ -62,9 +62,8 @@ Dependencies
   rolls are available, but it will build without them as long as the environment
   variables they provide are otherwise defined.
 
+**Building**
 
-Building
-~~~~~~~~~~
 To build the mpi-roll, execute this on a Rocks development
 machine (e.g., a frontend or development appliance): ::
 
@@ -78,8 +77,8 @@ modulefiles to use for building the software, e.g.,  ::
 
     # make ROLLCOMPILER='gnu intel' 2>&1 | tee build.log
 
-The build processes recognizes the values `gnu`, `intel` and `pgi` for the
-ROLLCOMPILER value, defaulting to `gnu`.
+The build processes recognizes the values ``gnu``, ``intel`` and ``pgi`` for the
+ROLLCOMPILER value, defaulting to ``gnu``.
 
 By default, the roll builds both openmpi and mvapich2 rpms.  You can limit the
 build to one or the other using the ROLLMPI make variable, e.g., ::
@@ -87,20 +86,20 @@ build to one or the other using the ROLLMPI make variable, e.g., ::
     # make ROLLMPI='mvapich2' 2>&1 | tee build.log
 
 By default, the roll builds for ethernet network fabric.  You can expand this
-by specifying one or more of the values 'ib' and 'mx' in the ROLLNETWORK make
+by specifying one or more of the values ``ib`` and ``mx`` in the ROLLNETWORK make
 varible, e.g., ::
 
     # make ROLLNETWORK='ib' 2>&1 | tee build.log
 
-For gnu compilers, the roll also supports a `ROLLOPTS` make variable value of
-'avx', indicating that the target architecture supports AVX instructions.
-If `ROLLOPTS` contains one or both of 'torque' and 'sge', then openmpi is built
-to integrate with the specified scheduler(s).  If `ROLLOPTS` contains 'torus',
+For gnu compilers, the roll also supports a ``ROLLOPTS`` make variable value of
+``avx`` indicating that the target architecture supports AVX instructions.
+If ``ROLLOPTS`` contains one or both of ``torque`` and ``sge`` then openmpi is built
+to integrate with the specified scheduler(s).  If ``ROLLOPTS`` contains ``torus``
 then mvapich2 is compiled with 3d torus support.
 
 
-Installation
-~~~~~~~~~~~~~~
+**Installation**
+
 To install, execute these instructions on a Rocks frontend: ::
 
     # rocks add roll *.iso
@@ -113,8 +112,8 @@ module files in: ::
 
     /opt/modulefiles/mpi/.(compiler)
 
-Testing
-~~~~~~~~~~
+**Testing**
+
 The mpi-roll includes a test script which can be run to verify proper
 installation of the roll documentation, binaries and module files. To
 run the test scripts execute the following command(s): ::
