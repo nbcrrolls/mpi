@@ -1,6 +1,6 @@
 .. hightlight:: rst
 
-Myrinet-mx Roll
+MPI Roll
 ================
 
 .. contents::
