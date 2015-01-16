@@ -7,7 +7,7 @@ ifndef ROLLNETWORK
   ROLLNETWORK = eth
 endif
 
-NAME           = sdsc-openmpi_$(COMPILERNAME)_$(ROLLNETWORK)
+NAME           = openmpi_$(COMPILERNAME)_$(ROLLNETWORK)
 VERSION        = 1.8.3
 RELEASE        = 1
 PKGROOT        = /opt/openmpi/$(COMPILERNAME)/$(ROLLNETWORK)

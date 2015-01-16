@@ -1,4 +1,4 @@
-NAME       = sdsc-mpi-kernel-objects
+NAME       = mpi-kernel-objects
 VERSION    = 1.0
 RELEASE    = 1
 PKGROOT    = /etc/rc.d/rocksconfig.d

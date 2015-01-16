@@ -58,11 +58,10 @@ REDHAT.ROOT = $(CURDIR)/../../
 
 -include $(ROCKSROOT)/etc/Rules.mk
 include Rules.mk
-include $(SDSCDEVEL)/Rules.mk
+include $(NBCRDEVEL)/NBCR.mk
 
 build:
 
-install:: typical-roll-test-install
-	perl -pi -e 's#ROLLNETWORK#$(ROLLNETWORK)#g;' $(ROOT)/$(PKGROOT)/*.t
+install:: roll-test-install
 
 clean::

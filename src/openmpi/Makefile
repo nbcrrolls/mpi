@@ -58,8 +58,7 @@ REDHAT.ROOT = $(PWD)/../../
 RPM.EXTRAS=%define __os_install_post /usr/lib/rpm/brp-compress
 
 -include $(ROCKSROOT)/etc/Rules.mk
-include $(SDSCDEVEL)/Pull.mk
-include $(SDSCDEVEL)/Rules.mk
+include $(NBCRDEVEL)/NBCR.mk
 
 COMPILE_FLAGS = -O3 -mtune=core2 -march=core2 -mfpmath=sse -msse3 -fPIC
 COMPILE_FFLAGS = -ffree-line-length-none
@@ -113,9 +112,7 @@ KNEM_LICENSE_FILES = knem.spec
 $(NAME).spec: DESCRIPTION LICENSE
 
 DESCRIPTION:
-	( \
-	  $(DESCRIBE_PKG) \
-	) > $@
+	echo $(NAME) $(VERSION) > $@
 
 LICENSE: $(SRC_DIRS)
 	for F in $(KNEM_LICENSE_FILES); do \
