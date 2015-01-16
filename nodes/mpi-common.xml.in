@@ -2,20 +2,20 @@
 
 <kickstart>
 
-<description>
-MPI libraries
-http://www.open-mpi.org
-http://mvapich.cse.ohio-state.edu
-</description>
+	<description>
+	MPI libraries
+	http://www.open-mpi.org
+	http://mvapich.cse.ohio-state.edu
+	</description>
 
-<copyright>
-Copyright (c) 2000 - 2014 The Regents of the University of California.
-All rights reserved. Rocks(r) v5.1 www.rocksclusters.org
-</copyright>
+	<copyright>
+	Copyright (c) 2000 - 2014 The Regents of the University of California.
+	All rights reserved. Rocks(r) v6.2 www.rocksclusters.org
+	</copyright>
 
-<package>sdsc-ROLLMPI_COMPILERNAME_ROLLNETWORK</package>
-<package>sdsc-mpi-kernel-objects</package>
-<package>sdsc-ROLLMPI-modules_COMPILERNAME_ROLLNETWORK</package>
-<package>sdsc-mpi-roll-test</package>
+	<package>ROLLMPI-COMPILERNAME-ROLLNETWORK</package>
+	<package>ROLLMPI-modules-COMPILERNAME-ROLLNETWORK</package>
+	<package>mpi-kernel-objects</package>
+	<package>mpi-roll-test</package>
 
 </kickstart>
