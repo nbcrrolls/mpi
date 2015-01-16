@@ -15,7 +15,7 @@ Cloned on 2014-12-16,  output of ``git describe``: ::
 To make a roll with openmpi (no mpvarich2) for eth and mx fabric and 
 gnu and intel compilers use the following command: ::
 
-    make ROLLCOMPILER='gnu intel' ROLLMPI='openmpi'  ROLLNETWORK='eth mx' 2>&1 | tee build.log
+    make ROLLCOMPILER='gnu intel' ROLLMPI='openmpi'  ROLLNETWORK='eth mx ib' 2>&1 | tee build.log
 
 Downloads
 -----------
