@@ -69,7 +69,7 @@ endif
 
 -include $(ROLLSROOT)/etc/Rolls.mk
 
-default:
+preroll::
 # Copy and substitute lines of nodes/*.in that reference ROLLCOMPILER,
 # ROLLNETWORK, and/or ROLLMPI, making one copy for each
 # ROLLCOMPILER/ROLLNETWORK/ROLLMPI value
@@ -88,6 +88,8 @@ default:
 	  done; \
 	  perl -pi -e '$$_ = "" if m/COMPILERNAME|ROLLNETWORK|ROLLMPI/' $$o; \
 	done
+
+default:
 	$(MAKE) ROLLCOMPILER="$(ROLLCOMPILER)" ROLLNETWORK="$(ROLLNETWORK)" ROLLMPI="$(ROLLMPI)" roll
 
 clean::
